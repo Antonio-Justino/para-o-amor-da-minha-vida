@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o Amor da minha vida</title>
+    <link href="index.css" rel="stylesheet">
+    <style>
+        /* Geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('imgens/meuamor.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: white; /* Ajusta a cor do texto para visibilidade */
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ff7e5f;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        /* Polaroid */
+        .polaroid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .polaroid img {
+            width: 200px;
+            height: auto;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        /* Botão */
+        #love-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        #love-button:hover {
+            background-color: #e56b4a;
+        }
+
+        /* Popup */
+        #popup {
+            display: none; /* Inicialmente escondido */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 300px;
+            z-index: 1000;
+        }
+
+        #popup h2 {
+            color: #ff7e5f;
+        }
+
+        #popup p {
+            color: #333;
+        }
+
+        #popup button {
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #popup button:hover {
+            background-color: #e56b4a;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffb5b5;
+            color: #333;
+            font-size: 18px;
+        }
+
+        /* Fundo escuro para o popup */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Ana Clara</h1>
+            <h3>Meu Amor</h3>
+        </div>
+    </header>
+    <div class="polaroid">
+        <img src="imgens/image.jpg" alt="mulher linda de no espelho">
+        <img src="imgens/image1.jpg" alt="mulher linda no meu ombro">
+        <img src="imgens/image2.jpg" alt="sorriso encantador">
+        <img src="imgens/image3.jpg" alt="mulher sedutora">
+        <img src="imgens/image4.jpg" alt="mulher simples no seus presentes">
+        <img src="imgens/image5.jpg" alt="mulher q me ganha de quallquer forma">
+        <img src="imgens/image6.jpg" alt="mulher consegue ser linda de qualque jeito">
+        <img src="imgens/image7.jpg" alt="mulher linda de qualque forma">
+        <img src="imgens/image8.jpg" alt="mulher linda sorrindo">
+        <img src="imgens/image9.jpg" alt="mulher linda do meu lado">
+        <img src="imgens/image10.jpg" alt="mulher linda fazendo joinha">
+        <img src="imgens/image11.jpg" alt="mulher no natal">
+        <img src="imgens/image12.jpg" alt="paozinho">
+        <img src="imgens/image13.jpg" alt="gostosa">
+    </div>
+
+    <!-- Botão para revelar o amor -->
+    <button id="love-button">Descubra o Meu Amor</button>
+
+    <!-- Popup -->
+    <div id="overlay"></div>
+    <div id="popup">
+        <h2>Mensagem de Amor</h2>
+        <p>Ana Clara, você é a razão de todos os meus sorrisos. Eu te amo mais do que palavras podem descrever!</p>
+        <button id="close-popup">Fechar</button>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Eu te amo! Para sempre seu ❤️</p>
+    </footer>
+
+    <script>
+        // Seleciona os elementos
+        const loveButton = document.getElementById('love-button');
+        const popup = document.getElementById('popup');
+        const overlay = document.getElementById('overlay');
+        const closePopup = document.getElementById('close-popup');
+
+        // Abre o popup
+        loveButton.addEventListener('click', () => {
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+
+        // Fecha o popup
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+
+        // Fecha o popup ao clicar no fundo
+        overlay.addEventListener('click', () => {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

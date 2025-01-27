@@ -1,0 +1,46 @@
+.polaroid {
+    width: 100%; /* Torna responsivo inicialmente */
+    max-width: 300px; /* Define um limite máximo de largura */
+    padding: 10px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradiente suave */
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px auto; /* Centraliza em telas menores */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+    border-radius: 10px;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.polaroid-caption {
+    margin-top: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Media queries para tornar o design mais responsivo */
+@media (max-width: 768px) {
+    .polaroid {
+        max-width: 250px; /* Reduz o tamanho do polaroid */
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
+}
+
+@media (max-width: 480px) {
+    .polaroid {
+        max-width: 200px; /* Reduz mais o tamanho para telas pequenas */
+        padding: 5px; /* Menor espaço interno */
+    }
+
+    .polaroid-caption {
+        font-size: 10px; /* Ajusta a fonte para telas menores */
+    }
+}
